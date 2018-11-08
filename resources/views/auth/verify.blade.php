@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content'
+@section('content')
     <p>{{ __('Verify Your Email Address') }}</p>
 
     @if (session('resent'))
