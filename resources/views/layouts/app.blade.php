@@ -9,7 +9,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
+    <a href="{{ url('/') }}">{{ config('app.name', 'Minder') }}</a>
 
         @guest
             <a href="{{ route('login') }}">{{ __('Login') }}</a>
