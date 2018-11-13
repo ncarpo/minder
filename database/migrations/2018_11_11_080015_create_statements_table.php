@@ -17,11 +17,10 @@ class CreateStatementsTable extends Migration
             $table->increments('id');
             $table->integer('area_id')->unsigned();
             $table->integer('aspect_id')->unsigned();
-            $table->integer('age_id')->unsigned();
+            $table->string('age_bracket');
             $table->text('description')->nullable();
             $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
             $table->foreign('aspect_id')->references('id')->on('aspects')->onDelete('cascade');
-            $table->foreign('age_id')->references('id')->on('ages')->onDelete('cascade');
         });
     }
 
@@ -32,6 +31,6 @@ class CreateStatementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eyfs_statements');
+        Schema::dropIfExists('statements');
     }
 }
