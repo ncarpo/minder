@@ -1,33 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Minder') }}</title>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @include('partials.meta')
 </head>
 <body>
-    <a href="{{ url('/') }}">{{ config('app.name', 'Minder') }}</a>
-
-        @guest
-            <a href="{{ route('login') }}">{{ __('Login') }}</a>
-            @if (Route::has('register'))
-                <a href="{{ route('register') }}">{{ __('Register') }}</a>
-            @endif
-        @else
-            <a href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-        @endguest
-
+    <div id="app">
+        @include('partials.header')
         @yield('content')
+    </div>
 </body>
 </html>

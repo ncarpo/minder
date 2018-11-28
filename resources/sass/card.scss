@@ -1,0 +1,15 @@
+.card {
+    background-color: #fff;
+    border-radius: 2px;
+
+    &.padding,
+    & > .padding {
+        padding: 20px;
+    }
+
+    header {
+        color: #404040;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,10 @@
+body {
+    background-color: $secondary-color;
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+    padding: 10px;
+    border: 1px solid $primary-color;
+}
