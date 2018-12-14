@@ -3,7 +3,7 @@
 <head>
     @include('partials.meta')
 </head>
-<body>
+<body class="auth-layout">
     @include('partials.header')
     <div class="flex flex-column justify-center items-center screen-width screen-height">
         @yield('content')

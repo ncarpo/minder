@@ -600,23 +600,31 @@ html {
  */
 
 body {
-  background-color: #30294e;
+  background-color: #e9e7f2;
 }
 
 input[type=email],
 input[type=password],
 input[type=text] {
-  padding: 10px;
+  border-radius: 3px;
+  padding: 14px 12px;
   border: 1px solid #17D485;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 button,
 .button {
   color: #fff;
   border: 1px solid #12a668;
-  padding: 14px 10px;
+  padding: 14px 12px;
   background-color: #17D485;
   text-decoration: none;
+  border-radius: 3px;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
@@ -645,6 +653,31 @@ button.hollow:hover,
   background-color: rgba(23, 212, 133, 0.2);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+button.hollow.pink,
+.button.hollow.pink {
+  color: #ff1975;
+  background-color: transparent;
+  border: 1px solid #ff1975;
+}
+
+button.hollow.pink:hover,
+.button.hollow.pink:hover {
+  border: 1px solid #e5005c;
+  background-color: rgba(255, 25, 117, 0.2);
+}
+
+button.pink,
+.button.pink {
+  background-color: #ff1975;
+  border: 1px solid #e5005c;
+}
+
+button.pink:hover,
+.button.pink:hover {
+  background-color: #ff0066;
+  border: 1px solid #cc0051;
 }
 
 .db {
@@ -687,6 +720,11 @@ button.hollow:hover,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .content-center {
@@ -884,6 +922,10 @@ button.hollow:hover,
 
 .pr-2 {
   padding-right: 30px;
+}
+
+.auth-layout {
+  background-color: #30294e;
 }
 
 .auth-form {

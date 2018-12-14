@@ -1,9 +1,14 @@
 <template>
     <div>
-        <h1>The Dashboard</h1>
+        <child-list></child-list>
     </div>
 </template>
 
 <script>
-    export default {}
+    import ChildList from './children/child-list';
+    export default {
+        components: {
+            ChildList
+        }
+    }
 </script>
